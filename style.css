@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap");
+:root {
+  --color-body: #f6f9fe;
+  --color-primary: #05555c;
+  --color-primary-light: #eaf3fa;
+  --color-links: #186f78;
+  --color-text: #3f7277;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+.portoflio {
+  width: 100%;
+  padding: 30px 8%;
+  background: var(--color-body);
+}
+.portoflio .section-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+.section-head h1 {
+  font-size: 32px;
+  margin: 10px 0 30px;
+  color: var(--color-primary);
+}
+.button-group {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.button-group button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  color: var(--color-primary);
+  background: #c8d1d8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+.button-group button.active {
+  background-color: var(--color-primary);
+  color: var(--color-body);
+}
+.button-group button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-body);
+}
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .item {
+  position: relative;
+  margin: 4px;
+  width: calc(33.33% - 8px);
+  overflow: hidden;
+  cursor: pointer;
+}
+.item img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  transition: 0.3s;
+}
+.item:hover img {
+  transform: scale(1.15);
+}
+.item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(5, 85, 92, 0.7);
+  color: var(--color-body);
+  padding: 15px;
+  overflow: hidden;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+.item:hover .overlay {
+  opacity: 1;
+}
+.item .overlay a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid var(--color-body);
+  color: var(--color-body);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.item .overlay a:hover {
+  background-color: var(--color-body);
+  color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .gallery .item {
+    width: calc(50% - 8px);
+  }
+}
+@media (max-width: 600px) {
+  .gallery .item {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
