@@ -2,9 +2,6 @@
 :root {
   --color-body: #f6f9fe;
   --color-primary: #05555c;
-  --color-primary-light: #eaf3fa;
-  --color-links: #186f78;
-  --color-text: #3f7277;
 }
 * {
   box-sizing: border-box;
